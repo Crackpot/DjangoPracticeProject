@@ -4,6 +4,7 @@ from .fields import OrderField
 
 from slugify import slugify
 
+
 class Course(models.Model):
     user = models.ForeignKey(User, related_name='courses_user')
     title = models.CharField(max_length=200)
@@ -26,6 +27,7 @@ class Course(models.Model):
 def user_directory_path(instance, filename):
     return "courses/user_{0}/{1}".format(instance.user.id, filename)
 
+
 class Lesson(models.Model):
     user = models.ForeignKey(User, related_name='lesson_user')
     course = models.ForeignKey(Course, related_name='lesson')
@@ -37,8 +39,7 @@ class Lesson(models.Model):
     order = OrderField(blank=True, for_fields=['course'])
 
     class Meta:
-        ordering = ['order']	
+        ordering = ['order']
 
     def __str__(self):
         return '{}.{}'.format(self.order, self.title)
-

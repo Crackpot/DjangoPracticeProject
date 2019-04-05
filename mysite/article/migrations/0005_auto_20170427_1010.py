@@ -9,7 +9,6 @@ from django.utils.timezone import utc
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('article', '0004_auto_20170427_0156'),
     ]
@@ -35,6 +34,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='comment',
             name='article',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='article.ArticlePost'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments',
+                                    to='article.ArticlePost'),
         ),
     ]

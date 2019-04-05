@@ -2,7 +2,7 @@ from django.conf.urls import url
 from . import views, list_views
 
 urlpatterns = [
-    url(r'^article-column/$', views.article_column, name="article_column"), 
+    url(r'^article-column/$', views.article_column, name="article_column"),
     url(r'^rename-column/$', views.rename_article_column, name="rename_article_column"),
     url(r'^del-column/$', views.del_article_column, name="del_article_column"),
     url(r'^article-post/$', views.article_post, name="article_post"),
@@ -17,4 +17,3 @@ urlpatterns = [
     url(r'^article-tag/$', views.article_tag, name="article_tag"),
     url(r'^del-article-tag/$', views.del_article_tag, name="del_article_tag"),
 ]
-

@@ -10,7 +10,6 @@ from django.utils.timezone import utc
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
         ('article', '0001_initial'),
@@ -26,8 +25,10 @@ class Migration(migrations.Migration):
                 ('body', models.TextField()),
                 ('created', models.DateTimeField(default=datetime.datetime(2017, 4, 24, 9, 40, 3, 211940, tzinfo=utc))),
                 ('updated', models.DateTimeField(auto_now=True)),
-                ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='article', to=settings.AUTH_USER_MODEL)),
-                ('column', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='article_column', to='article.ArticleColumn')),
+                ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='article',
+                                             to=settings.AUTH_USER_MODEL)),
+                ('column', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='article_column',
+                                             to='article.ArticleColumn')),
             ],
             options={
                 'ordering': ('title',),

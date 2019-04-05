@@ -7,4 +7,3 @@ urlpatterns = [
     url(r'^del-image/$', views.del_image, name='del_image'),
     url(r'^images/$', views.falls_images, name="falls_images"),
 ]
-
