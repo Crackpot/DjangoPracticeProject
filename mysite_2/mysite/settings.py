@@ -124,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ( 
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
@@ -132,16 +132,16 @@ LOGIN_REDIRECT_URL = '/home/'
 
 LOGIN_URL = '/account/login/'
 
-EMAIL_HOST = 'smtp.163.com' 
-EMAIL_HOST_USER = "your_email@163.com" 
-EMAIL_HOST_PASSWORD = "your_email_password" 
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_HOST_USER = "your_email@163.com"
+EMAIL_HOST_PASSWORD = "your_email_password"
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = "your_email@163.com"
 
 
-REDIS_HOST = 'localhost' 
-REDIS_PORT = 6379 
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
 REDIS_DB = 0
 
 MEDIA_URL = '/media/'
